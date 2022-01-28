@@ -28,7 +28,7 @@ function handleHtml(html){
     //   }
 
     let totalcases = selTool(contentArr[0]).text()
-    console.log( 'TotalCases: ' + totalcases )
+    console.log( 'TotalCases: ' + totalcases ) ///
 }
 
 
