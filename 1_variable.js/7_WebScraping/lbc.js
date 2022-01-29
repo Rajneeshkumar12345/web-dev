@@ -17,6 +17,12 @@ function cb(error, response, html) {
   
   
   function handleHtml(html){
-      let selTool = cheerio.load(html)
-  }  //// vs chheck ker rha th just jokr////////
-  ////////////just last check
+    let selTool = cheerio.load(html)
+
+    let elemArr = selTool('.match-comment-wrapper .match-comment-long-text')
+
+    let lbc = selTool(elemArr[0]).text()
+
+
+    console.log(lbc)
+} 
