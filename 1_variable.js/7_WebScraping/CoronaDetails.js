@@ -1,4 +1,8 @@
 
+//html data collect from the website
+
+
+
 const request = require('request')
 
 const cheerio = require('cheerio')
@@ -29,6 +33,19 @@ function handleHtml(html){
 
     let totalcases = selTool(contentArr[0]).text()
     console.log( 'TotalCases: ' + totalcases ) ///
+
+  
+   
+    let totalDeaths = selTool(contentArr[1]).text(); // cases
+    let totalRecoveries = selTool(contentArr[2]).text();
+   
+    console.log("Totals Deaths", totalDeaths);
+    console.log("Total Recoverd", totalRecoveries);
+   
+   
+   
+   
+   
 }
 
 
