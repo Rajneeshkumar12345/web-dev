@@ -1,11 +1,11 @@
 
-//html data collect from the website
+// Webscraping - Extracting meaningfull HTML data from different website is knows as webscrsping
 
 
 
-const request = require('request')
+const request = require('request') // Website server requests 
 
-const cheerio = require('cheerio')
+const cheerio = require('cheerio') // meaning full data collect help it means Specially  particular data 
 
 console.log("before");
 
@@ -29,9 +29,9 @@ function handleHtml(html){
     //   for(let i=0 ; i<contentArr.length ;i++){
     //       let data = selTool(contentArr[i]).text()
     //       console.log(data)
-    //   }
+    //   }  // loop lagane se iss class ke sare data aa jayega
 
-    let totalcases = selTool(contentArr[0]).text()
+    let totalcases = selTool(contentArr[0]).text();
     console.log( 'TotalCases: ' + totalcases ) ///
 
   
