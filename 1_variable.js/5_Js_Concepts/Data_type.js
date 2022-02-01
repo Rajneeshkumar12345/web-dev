@@ -28,3 +28,5 @@ firstPerson = 'Hanuman'
 
 console.log(firstPerson)  // output is = Hanuman
 console.log(secondPerson)   //  output is = Rajneesh
+// DAta type Stack me banta hai So, it is follow LIFO - Last in First out
+// So it is follow Call by Value
