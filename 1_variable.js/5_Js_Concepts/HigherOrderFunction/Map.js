@@ -15,6 +15,9 @@ let arr = [2, 5, 9, 8, 15, 11, 6];
 //map takes a callback function as an arg
 //map will call the callback functions as many times as the elements in the array
 //map will process every value and will apply the instruction that inside the callback function
+
+
+// ********//
 //map returns a new array
 
 
@@ -26,25 +29,41 @@ let arr = [2, 5, 9, 8, 15, 11, 6];
 
  //console.log(arr);
 
+
+
+
+
+
 //  let nameArr = ['raneesh', 'prabhu', 'ram']
 
 //  let nameArr2 = nameArr.map(function (n){
 //      return n;
 //  })
 
- //console.log(nameArr2);
+//  console.log(nameArr2);
+
+
+
+
+
+
+
 
 // Questions
 
+
 let nameArr = ['Vishal Kumar', 'Vaibhav Rawal', 'Anmol Taneja']
-// Task - first and last name split
+//Task - first and last name split
 
-// let modifiedArr = nameArr.map(function(n){
-//     let partsOfname = n.split(' ');
-//     return partsOfname
-// })
+let modifiedArr = nameArr.map(function(n){
+    let partsOfname = n.split(' ');
+    return partsOfname
+})
 
-//console.log(modifiedArr)
+console.log(modifiedArr)
+
+
+
 
 
 
