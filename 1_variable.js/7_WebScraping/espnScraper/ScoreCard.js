@@ -23,7 +23,7 @@ function extractMatchDetails(html){
  
     let descStringArr = descString.text().split(',')
 
-    let venue = descStringArr[1].trim()
+    let venue = descStringArr[1].trim()  // Trim used for remove unwanted space
     let date = descStringArr[2].trim()
 
     let result = $('.match-info.match-info-MATCH.match-info-MATCH-half-width .status-text span').text()

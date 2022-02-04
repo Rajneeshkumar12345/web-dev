@@ -10,24 +10,25 @@ function cb(err, response, html) {
   if (err) {
     console.error(err);
   } else {
+         //console.log(html);  // we have get all HTML data from that web page but that is no need
     extractLink(html);
   }
 }
 
 function extractLink(html) {
-    let $ = cheerio.load(html);
-    let anchorElem = $('a[data-hover="View All Results"]');
+    let $ = cheerio.load(html);  // basically $ means selTool it means we have use all attributes of cheerio
+    let anchorElem = $('a[data-hover="View All Results"]'); // Since that element present in Anchor tag
   
-    let link = anchorElem.attr("href");
+    let link = anchorElem.attr("href");  // Since AnchorTag present href So we need to href Link
   
     //console.log(link)
   
-    let fullLink = "https://www.espncricinfo.com" + link;
-   // console.log(fullLink)
+    let fullLink = "https://www.espncricinfo.com" + link; // Go to view full result webPage
+      //  console.log(fullLink)
 
 
     
-  getAllMatchLink(fullLink)
+  getAllMatchLink(fullLink)          // Now we need to get all matches webLink
 }
 
 function getAllMatchLink(uri){
@@ -36,6 +37,7 @@ function getAllMatchLink(uri){
                       console.log(error)
                }
                else{
+                     // console.log(html)
                       extractAllLink(html)
                }
         } )
@@ -50,7 +52,7 @@ function extractAllLink(html){
    for(let i=0 ; i<scoreCardArr.length ; i++){
           let link = $(scoreCardArr[i]).attr('href')
           let fullLink = 'https://www.espncricinfo.com/'+link
-          console.log(fullLink)
+           console.log(fullLink)
    }
 
 
