@@ -4,6 +4,10 @@ const request = require('request')
 
 const cheerio = require('cheerio')
 
+const allMatchObj = require('./allMatch'); 
+
+
+
 request(url, cb);
 
 function cb(err, response, html) {
@@ -21,39 +25,40 @@ function extractLink(html) {
   
     let link = anchorElem.attr("href");  // Since AnchorTag present href So we need to href Link
   
-    //console.log(link)
+    //console.log(link)  
   
     let fullLink = "https://www.espncricinfo.com" + link; // Go to view full result webPage
       //  console.log(fullLink)
 
 
     
-  getAllMatchLink(fullLink)          // Now we need to get all matches webLink
+  //getAllMatchLink(fullLink)          // Now we need to get all matches webLink
+  allMatchObj.getAllMatch(fullLink)
 }
 
-function getAllMatchLink(uri){
-        request(uri , function(error , response , html){
-               if(error){
-                      console.log(error)
-               }
-               else{
-                     // console.log(html)
-                      extractAllLink(html)
-               }
-        } )
-}
+// function getAllMatchLink(uri){
+//         request(uri , function(error , response , html){
+//                if(error){
+//                       console.log(error)
+//                }
+//                else{
+//                      // console.log(html)
+//                       extractAllLink(html)
+//                }
+//         } )
+// }
 
 
-function extractAllLink(html){
-   let $ = cheerio.load(html)
+// function extractAllLink(html){
+//    let $ = cheerio.load(html)
 
-   let scoreCardArr = $('a[data-hover="Scorecard"]')
+//    let scoreCardArr = $('a[data-hover="Scorecard"]')
 
-   for(let i=0 ; i<scoreCardArr.length ; i++){
-          let link = $(scoreCardArr[i]).attr('href')
-          let fullLink = 'https://www.espncricinfo.com/'+link
-           console.log(fullLink)
-   }
+//    for(let i=0 ; i<scoreCardArr.length ; i++){
+//           let link = $(scoreCardArr[i]).attr('href')
+//           let fullLink = 'https://www.espncricinfo.com/'+link
+//            console.log(fullLink)
+//    }
 
 
-}
+// }
