@@ -6,6 +6,14 @@ const cheerio = require('cheerio')
 
 const allMatchObj = require('./allMatch'); 
 
+const fs = require('fs')
+
+const path = require('path')
+
+let iplPath = path.join(__dirname , "IPL")
+
+dirCreator(iplPath);
+
 
 
 request(url, cb);
@@ -62,3 +70,11 @@ function extractLink(html) {
 
 
 // }
+
+
+
+function dirCreator(filePath){
+  if(fs.existsSync(filePath)==false){
+    fs.mkdirSync(filePath)
+  }
+}
