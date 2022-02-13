@@ -27,19 +27,7 @@ var newReleases = [
     
 ];
 
-// let lages = newRelease.filter(function(v){
-//     if(v.rating >= 8){
-//            return true
-//     }
-//     else{
-//            return false
-//     }
-//  }).map(function(n){                    // **********//
-//      return n.
-// })
 
-
-// console.log(lages)
 
 
 let moviesGreterThan8 = newReleases.filter(function(newRelease){

@@ -1,10 +1,21 @@
 // Node -> non Strict Mode 
 
 
-//console.log(this) // global area  // Empty Object
 
-// inside a function
-// function f(){
+
+  //   1 -----
+    //  console.log(this) // global area  // Empty Object
+
+
+
+
+
+
+
+
+//   2 ------
+    //inside a function
+//     function f(){
 //        console.log(this)
 // }
 
@@ -12,6 +23,9 @@
 
 
 
+
+
+ /// 3 --- 
 // inside a function inside an  Object
 
 // let obj ={
@@ -21,24 +35,28 @@
 //          console.log(this)
 //    }
 // }
+//   obj.f() // it will return the object Itself
 
 
-// obj.f() // it will return the object Itself
 
 
 
-let obj2 ={
-    name :'Rahul',
-    f : function(){
-           function g(){
-                  console.log(this)
-           }
-           g()
-    }
+
+
+//  4 -----
+
+// let obj2 ={
+//     name :'Rahul',
+//     f : function(){
+//            function g(){
+//                   console.log(this)
+//            }
+//            g()
+//     }
     
-}
+// }
 
-obj2.f()
+// obj2.f()
 
 
 //Sumarry -
