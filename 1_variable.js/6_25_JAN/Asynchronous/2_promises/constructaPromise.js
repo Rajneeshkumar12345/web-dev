@@ -27,4 +27,4 @@ let promise = new Promise(function (resolve, reject) {   // By default resolve a
 
     // promise.catch(function () {
     //     console.log("Error Not Equal");
-    //   });//
+    //   });
